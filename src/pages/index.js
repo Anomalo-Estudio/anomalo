@@ -1,8 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+// import styles from "../components/App.css"
 import Layout from "../components/layout"
- 
+import Navbar from "../components/Navbar"
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Works from "./Works"
+import About from "./About"
+import Contact from "./Contact"
+
+
 const IndexPage = ({ data }) => (
+  
+  <Router>
+  <Navbar />
+  <Switch>
+
   <Layout>
     <h1>Welcome to Anómalo site.</h1>
     <p>We are a</p>
@@ -23,6 +35,12 @@ const IndexPage = ({ data }) => (
   </ul>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
+  <Route path='/' exact />
+  <Route path='/' component={Works} />
+  <Route path='/' component={About} />
+  <Route path='/' component={Contact} />
+  </Switch>
+  </Router>
 )
  
 export default IndexPage

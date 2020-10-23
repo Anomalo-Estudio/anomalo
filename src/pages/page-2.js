@@ -3,6 +3,29 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+// import { grapgql } from "gatsby"
+
+// export const query = graphql`
+// query IndexQuery {
+//   allStrapiWork {
+//     edges {
+//       node {
+//         strapiId
+//         title
+//         description
+//         singleImage {
+//           publicURL
+//         }
+//         multipleImages {
+//           localFile {
+//             publicURL
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// `
 
 const SecondPage = () => (
   <Layout>
