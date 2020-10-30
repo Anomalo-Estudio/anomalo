@@ -12,34 +12,34 @@ import Contact from "./Contact"
 const IndexPage = ({ data }) => (
   
   <Router>
-  <Navbar />
-  <Switch>
+    <Navbar />
+    <Switch>
 
-  <Layout>
-    <h1>Welcome to Anómalo site.</h1>
-    <p>We are a</p>
-    <p>multidisciplinary</p>
-    <p>design studio</p>
-    <p>Somos un estudio</p>
-    <p>de diseño.</p>
-    <p>multidisciplinario</p>
-    <ul>
-      {data.allStrapiArticulo.edges.map(({ node }) => (
-    <li key={node.strapiId}>
-      <h2>
-        <Link to={`/${node.strapiId}`}>{node.titulo}</Link>
-      </h2>
-      <p>{node.descripcion}</p>
-    </li>
-))}
-  </ul>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-  <Route path='/' exact />
-  <Route path='/' component={Works} />
-  <Route path='/' component={About} />
-  <Route path='/' component={Contact} />
-  </Switch>
+    <Layout>
+      <h1>Welcome to Anómalo site.</h1>
+      <p>We are a</p>
+      <p>multidisciplinary</p>
+      <p>design studio</p>
+      <p>Somos un estudio</p>
+      <p>de diseño.</p>
+      <p>multidisciplinario</p>
+      <ul>
+        {data.allStrapiArticulo.edges.map(({ node }) => (
+      <li key={node.strapiId}>
+        <h2>
+          <Link to={`/${node.strapiId}`}>{node.titulo}</Link>
+        </h2>
+        <p>{node.descripcion}</p>
+      </li>
+  ))}
+    </ul>
+      <Link to="/page-2/">Go to page 2</Link>
+    </Layout>
+    <Route path='/' exact />
+    <Route path='/' exact component={Works} />
+    <Route path='/' exact component={About} />
+    <Route path='/' exact component={Contact} />
+    </Switch>
   </Router>
 )
  

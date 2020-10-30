@@ -6,14 +6,15 @@
   margin: 0;
   padding: 0;
   font-family: 'Hypocrite';
+  font-size: larger;
 }
 
 .Works, .About, .Contact {
   display: flex;
-  height: 90vh;
+  height: 200vh;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 @font-face {
@@ -35,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
   font-family: "Hypocrite", serif, "citizen", sans-serif;
-  font-weight: normal;
+  font-weight: medium;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -117,7 +118,7 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  font-size: 100%;
 }
 sub,
 sup {
